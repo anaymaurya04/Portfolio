@@ -12,7 +12,7 @@ export const Hero = () => {
           I'm a 3rd year BCA student and aspiring Data Science and Machine Leaning enthusiast who is currently learning and innovating.
         </p>
         <a href="mailto:anaymaurya04@email.com" className={styles.contactBtn}>
-          Contact Me
+          Download CV/Resume
         </a>
       </div>
       <img

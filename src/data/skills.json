@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Firebase",
+    "imageSrc": "skills/firebase.png"
+  },
+  {
+    "title": "Flutter",
+    "imageSrc": "skills/flutter.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "Tensorflow",
+    "imageSrc": "skills/tensorflow.png"
+  },
+  {
+    "title": "Machine Leaning",
+    "imageSrc": "skills/machinelearning.png"
+  },
+  {
+    "title": "Pandas",
+    "imageSrc": "skills/Pandas.png"
+  },
+  {
+    "title": "NumPy",
+    "imageSrc": "skills/NumPy.png"
+  }
+]

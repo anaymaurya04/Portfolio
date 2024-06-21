@@ -1,0 +1,23 @@
+[
+  {
+    "title": "ParryatanApp",
+    "imageSrc": "projects/project.png",
+    "description": "This is the project I worked on to learn basics of flutter. It is  a mobile application developed using Flutter.",
+    "skills": ["Firestore", "Flutter", "Node"],
+    "source": "https://github.com/anaymaurya04/ParryatanApp"
+  },
+  {
+    "title": "IPL Prediction",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn basics of Machine Learning and Pandas library.",
+    "skills": ["Machine Learning", "Pandas", "Streamlit"],
+    "source": "https://github.com/anaymaurya04/IPLPrediction"
+  },
+  {
+    "title": "Indian Sign Language Translatoe",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn computer vision and OpenCV..",
+    "skills": ["Tensorflow", "Mediapipe", "Numpy","Pandas"],
+    "source": "https://github.com/anaymaurya04/ISL_Detection"
+  }
+]

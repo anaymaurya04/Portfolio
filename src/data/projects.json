@@ -1,14 +1,14 @@
 [
   {
     "title": "ParryatanApp",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/Paryattan.png",
     "description": "This is the project I worked on to learn basics of flutter. It is  a mobile application developed using Flutter.",
     "skills": ["Firestore", "Flutter", "Node"],
     "source": "https://github.com/anaymaurya04/ParryatanApp"
   },
   {
     "title": "IPL Prediction",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/IPL.png",
     "description": "This is a project made to learn basics of Machine Learning and Pandas library.",
     "skills": ["Machine Learning", "Pandas", "Streamlit"],
     "source": "https://github.com/anaymaurya04/IPLPrediction"

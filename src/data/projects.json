@@ -14,8 +14,8 @@
     "source": "https://github.com/anaymaurya04/IPLPrediction"
   },
   {
-    "title": "Indian Sign Language Translatoe",
-    "imageSrc": "projects/project.png",
+    "title": "Indian Sign Language Translator",
+    "imageSrc": "projects/ISL.png",
     "description": "This is a project made to learn computer vision and OpenCV..",
     "skills": ["Tensorflow", "Mediapipe", "Numpy","Pandas"],
     "source": "https://github.com/anaymaurya04/ISL_Detection"

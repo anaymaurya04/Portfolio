@@ -26,9 +26,9 @@ export const About = () => {
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/cursorIcon.png")} alt="Server icon" />
             <div className={styles.aboutItemText}>
-              <h3>Data Science</h3>
+              <h3>AI/ML</h3>
               <p>
-                I have some experience with Machine Learning including projects listed below, I am currently learning Data Science and its intrecasies.
+                I am an AI/ML enthusiast currently learning and developing.
               </p>
             </div>
           </li>

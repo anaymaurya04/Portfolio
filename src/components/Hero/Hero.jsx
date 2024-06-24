@@ -9,7 +9,7 @@ export const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Anay Maurya</h1>
         <p className={styles.description}>
-          I'm a 3rd year BCA student and aspiring Data Science and Machine Leaning enthusiast who is currently learning and innovating.
+          I'm a 3rd year BCA student and aspiring Artifical Intelligence and Machine Leaning enthusiast who is currently learning and innovating.
         </p>
         <a href="mailto:anaymaurya04@email.com" className={styles.contactBtn}>
           Download CV/Resume

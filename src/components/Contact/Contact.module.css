@@ -10,18 +10,27 @@
   width: 100vw;
   padding: 58px 10%;
   gap: 10px;
+  box-sizing: border-box;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text h2 {
   font-size: 80px;
   font-weight: 700;
   letter-spacing: 4px;
+  margin: 0;
 }
 
 .text p {
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 2px;
+  margin: 10px 0 0 0;
 }
 
 .links {
@@ -49,16 +58,31 @@
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
+    align-items: center;
     gap: 23px;
+    padding: 20px 5%;
   }
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .text h2 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .text p {
+    font-size: 30px;
+    text-align: center;
   }
 
   .links {
     align-items: center;
+  }
+
+  .link {
+    gap: 15px;
+  }
+
+  .link a {
+    font-size: 24px;
+    text-align: center;
   }
 }

@@ -11,7 +11,11 @@ export const Hero = () => {
         <p className={styles.description}>
           I'm a 3rd year BCA student and aspiring Artifical Intelligence and Machine Leaning enthusiast who is currently learning and innovating.
         </p>
-        <a href="mailto:anaymaurya04@email.com" className={styles.contactBtn}>
+        <a
+          href="assets/hero/AnayMauryaReume.pdf" // Update this path to the actual path of your resume file
+          className={styles.contactBtn}
+          download // This attribute triggers the download
+        >
           Download CV/Resume
         </a>
       </div>

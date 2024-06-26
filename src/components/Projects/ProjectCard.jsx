@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./ProjectCard.module.css";
 import { getImageUrl } from "../../utils";
+import githubIcon from "/assets/contact/githubIcon.png"
 
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
@@ -26,7 +27,7 @@ export const ProjectCard = ({
       </ul>
       <div className={styles.links}>
         <a href={source} className={styles.link}>
-        <img src="assets/contact/githubIcon.png" alt="Source" />
+        <img src={githubIcon} alt="Source" className={styles.icon} />
         </a>
       </div>
     </div>

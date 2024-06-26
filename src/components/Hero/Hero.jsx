@@ -12,7 +12,7 @@ export const Hero = () => {
           I'm a 3rd year BCA student and aspiring Artifical Intelligence and Machine Leaning enthusiast who is currently learning and innovating.
         </p>
         <a
-          href="assets/hero/AnayMauryaReume.pdf" // Update this path to the actual path of your resume file
+          href="https://drive.google.com/file/d/1YeQ9FLokgFPD0vpUTYo0sF5TBoC6wxxB/view?usp=drive_link" // Update this path to the actual path of your resume file
           className={styles.contactBtn}
           download // This attribute triggers the download
         >

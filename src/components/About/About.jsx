@@ -26,9 +26,9 @@ export const About = () => {
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/cursorIcon.png")} alt="Server icon" />
             <div className={styles.aboutItemText}>
-              <h3>AI/ML</h3>
+              <h3>AI and DS</h3>
               <p>
-                I am an AI/ML enthusiast currently learning and developing.
+                I am an AI and DS enthusiast currently learning and developing.
               </p>
             </div>
           </li>

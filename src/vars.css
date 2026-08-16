@@ -1,12 +1,94 @@
 :root {
-  /* Colours */
-  --color-text: #fff;
-  --color-primary: #576cbc;
-  --color-secondary: #19376d;
-  --color-dark: #0b2447;
-  --color-bg: #04152d;
-  --color-primary-light: #263679;
+  /* ------------------------------------------------------------------
+     INDEX — personal design system
+     Theme: engineering documentation that happens to be a portfolio.
+     Colors map to the request / process / response lifecycle of a
+     backend system. Dark is the default theme.
+  ------------------------------------------------------------------ */
 
   /* Fonts */
-  --font-roboto: "Roboto";
+  --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Mono",
+    Menlo, Consolas, monospace;
+
+  /* Dark mode (default) */
+  --color-bg: #0b0e11;
+  --color-surface: #12161b;
+  --color-surface-hover: #1a2027;
+  --color-card: #12161b;
+  --color-border: #232a31;
+  --color-border-strong: #313a43;
+  --color-text: #edeff2;
+  --color-text-strong: #ffffff;
+  --color-text-secondary: #9aa4ae;
+  --color-text-muted: #6c7680;
+  --color-text-faint: #4b545d;
+
+  /* Accents — lifecycle colors (same in both modes) */
+  --accent-primary: #5b6ef5; /* request blue — interface / interactive */
+  --accent-primary-hover: #7a8aff;
+  --accent-primary-dim: rgba(91, 110, 245, 0.12);
+  --accent-primary-dim-strong: rgba(91, 110, 245, 0.22);
+  --accent-pending: #e8a33d; /* process amber — in development / highlight */
+  --accent-pending-dim: rgba(232, 163, 61, 0.14);
+  --accent-success: #2bb673; /* response teal — shipped / done (sparingly) */
+  --accent-success-dim: rgba(43, 182, 115, 0.14);
+  --accent-alert: #e5484d; /* reserved for real errors/warnings only */
+
+  /* Radius — keep small, avoid SaaS soft radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-full: 9999px;
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Layout */
+  --content-width: 1120px;
+  --topbar-height: 56px;
+
+  /* Shadows — subtle, functional */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
+
+  /* Motion */
+  --motion-fast: 120ms;
+  --motion-med: 160ms;
+  --motion-slow: 200ms;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f0eee9;
+  --color-card: #ffffff;
+  --color-border: #e4e1d8;
+  --color-border-strong: #d3cfc4;
+  --color-text: #14181c;
+  --color-text-strong: #000000;
+  --color-text-secondary: #5b646c;
+  --color-text-muted: #87909a;
+  --color-text-faint: #aab1b9;
+
+  --accent-primary-dim: rgba(91, 110, 245, 0.08);
+  --accent-primary-dim-strong: rgba(91, 110, 245, 0.16);
+  --accent-pending-dim: rgba(232, 163, 61, 0.12);
+  --accent-success-dim: rgba(43, 182, 115, 0.12);
+
+  --shadow-sm: 0 1px 2px rgba(20, 24, 28, 0.06);
+  --shadow-md: 0 2px 8px rgba(20, 24, 28, 0.08);
+  --shadow-lg: 0 8px 24px rgba(20, 24, 28, 0.1);
 }

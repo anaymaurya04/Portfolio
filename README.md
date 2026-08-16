@@ -1,5 +1,7 @@
 # Portfolio — Anay Maurya
 
+**Live:** https://anaymaurya04.vercel.app/
+
 A backend-focused portfolio built with React + Vite, styled as engineering documentation rather than a product landing page. Content is a single-source data file derived from real, verifiable information (resume, GitHub repos, project READMEs) — no invented numbers.
 
 ## Tech stack
@@ -53,3 +55,12 @@ Hosted on **Vercel** (auto-deploys on push to `main`):
 - Output directory: `dist`
 
 `node_modules/` and `dist/` are gitignored and never committed.
+
+## Updating the resume (cv.pdf)
+
+The resume is a single tracked file: `assets/hero/AnayMauryaReume.pdf` (note the filename typo — the `resumePath` in `src/data/content.js` points there). The footer `cv.pdf` link and the intro resume button both use it with a `download` attribute, so it downloads in one click.
+
+To replace it:
+
+1. Overwrite `assets/hero/AnayMauryaReume.pdf` with the new PDF (keep the same filename), or change `resumePath` in `src/data/content.js` and drop the new file at that path.
+2. Commit and push to `main` — Vercel rebuilds and the hashed asset URL updates automatically.

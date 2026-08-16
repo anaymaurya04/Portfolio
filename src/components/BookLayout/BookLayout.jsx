@@ -64,12 +64,30 @@ const ArrowIcon = ({ direction }) => (
 export const BookLayout = ({ theme, onToggleTheme }) => {
   const [current, setCurrent] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuClosing, setMenuClosing] = useState(false);
   const { Component } = chapters[current];
   const total = chapters.length;
 
+  const closeMenu = () => {
+    if (!menuOpen) return;
+    setMenuClosing(true);
+    setTimeout(() => {
+      setMenuOpen(false);
+      setMenuClosing(false);
+    }, 180);
+  };
+
+  const toggleMenu = () => {
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      setMenuOpen(true);
+    }
+  };
+
   const goTo = (index) => {
     setCurrent(index);
-    setMenuOpen(false);
+    closeMenu();
     window.scrollTo({ top: 0, behavior: "auto" });
   };
 
@@ -110,7 +128,7 @@ export const BookLayout = ({ theme, onToggleTheme }) => {
           </button>
           <button
             className={styles.iconBtn}
-            onClick={() => setMenuOpen((open) => !open)}
+            onClick={toggleMenu}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
@@ -120,7 +138,11 @@ export const BookLayout = ({ theme, onToggleTheme }) => {
       </header>
 
       {menuOpen && (
-        <nav className={styles.mobileNav}>
+        <nav
+          className={`${styles.mobileNav} ${
+            menuClosing ? styles.mobileNavClosing : styles.mobileNavOpen
+          }`}
+        >
           {chapters.map((chapter, index) => (
             <button
               key={chapter.num}

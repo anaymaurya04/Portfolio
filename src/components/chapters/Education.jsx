@@ -46,9 +46,9 @@ export const Education = () => {
       <h2 className={styles.sectionTitle}>Current Learning Focus</h2>
       <div className={styles.stackRow}>
         <Tag>Spring Boot</Tag>
-        <Tag>RAG</Tag>
-        <Tag>LangChain</Tag>
-        <Tag>Vector Databases</Tag>
+        <Tag>PostgreSQL</Tag>
+        <Tag>Durable Execution</Tag>
+        <Tag>Hybrid Search</Tag>
         <Tag>Data Structures &amp; Algorithms</Tag>
       </div>
     </div>

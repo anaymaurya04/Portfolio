@@ -1,7 +1,7 @@
 export const identity = {
   name: "Anay Maurya",
   initials: "AM",
-  subtitle: "Professional Portfolio",
+  subtitle: "Java Backend Developer",
   phone: "+91 7905619358",
   phoneHref: "tel:+917905619358",
   email: "anaymaurya04@gmail.com",
@@ -14,49 +14,52 @@ export const identity = {
 
 export const about = {
   headline:
-    "Backend-focused MCA candidate at JIIT Noida (2025\u20132027) with hands-on experience building REST APIs, hybrid search systems, and AI-integrated applications. Strong foundation in Java, Spring Boot, Python, SQL, vector search, and data structures & algorithms.",
+    "Java backend-focused MCA candidate at JIIT Noida (2025\u20132027) with hands-on experience building REST APIs, durable execution services, and hybrid search systems. Strong foundation in Java 17/21, Spring Boot, PostgreSQL, and data structures & algorithms.",
   detail:
-    "Interested in retrieval-augmented AI systems where architecture choices double as trust and governance decisions \u2014 grounding LLM outputs in traceable evidence rather than free-form generation.",
+    "Interested in backend reliability: designing systems that handle ambiguous failures, idempotency, and concurrency honestly \u2014 and documenting the limits of what they can guarantee.",
 };
 
 export const skillCategories = [
   {
     category: "Languages",
-    skills: ["Java", "Python", "SQL", "JavaScript", "Dart"],
+    skills: ["Java 17/21", "SQL", "Python", "JavaScript"],
   },
   {
-    category: "Backend & Frameworks",
+    category: "Computer Science",
+    skills: ["Data Structures & Algorithms", "Object-Oriented Programming"],
+  },
+  {
+    category: "Backend",
     skills: [
       "Spring Boot",
+      "Spring MVC",
       "Spring Data JPA",
       "Hibernate",
-      "Spring AI",
       "REST APIs",
-      "FastAPI",
-      "Flask",
+      "Spring AI",
     ],
   },
   {
     category: "Databases & Search",
+    skills: ["PostgreSQL", "pgvector", "H2", "Apache Lucene"],
+  },
+  {
+    category: "Testing & Tools",
     skills: [
-      "PostgreSQL",
-      "pgvector",
-      "MySQL",
-      "ChromaDB",
-      "Apache Lucene",
-      "BM25",
-      "HNSW",
+      "JUnit 5",
+      "API & Integration Testing",
+      "Maven",
+      "Git/GitHub",
+      "Postman",
+      "Docker Compose",
     ],
   },
   {
-    category: "AI / ML",
+    category: "Foundations",
     skills: [
-      "RAG",
-      "Embeddings",
-      "Hybrid Retrieval",
-      "Vector Search",
-      "NLP",
-      "LangChain",
+      "HTML/CSS",
+      "Flutter",
+      "Firebase",
       "TensorFlow",
       "Scikit-Learn",
       "OpenCV",
@@ -64,69 +67,108 @@ export const skillCategories = [
       "NumPy",
     ],
   },
-  {
-    category: "Tools & Practices",
-    skills: [
-      "Git/GitHub",
-      "Maven",
-      "JUnit",
-      "Docker",
-      "Postman",
-      "Agile/Scrum",
-      "TDD",
-    ],
-  },
-  {
-    category: "Other",
-    skills: [
-      "Flutter",
-      "Firebase",
-      "Chrome Extensions (Manifest V3)",
-      "HTML/CSS",
-    ],
-  },
 ];
 
+export const skillCount = skillCategories.reduce(
+  (total, category) => total + category.skills.length,
+  0
+);
+
 export const experience = [
+  {
+    role: "Freelance Web Developer",
+    organisation: "Bharat Foundation",
+    period: "Nov 2025 \u2013 Feb 2026",
+    points: [
+      "Built and delivered a website for Bharat Foundation as a paid freelance project using HTML, CSS, and JavaScript.",
+    ],
+  },
   {
     role: "DEF-SPACE Winter Intern",
     organisation: "Bharat Space Education Research Centre (BSERC)",
     period: "Dec 2025 \u2013 Jan 2026",
     points: [
-      "STEM-focused internship centered on grassroots-level technology development, innovation, and practical technology applications.",
-      "Gained exposure to space education, research-driven problem solving, and technology-oriented work aligned with the Viksit Bharat @2047 vision.",
-      "Certificate issued Jan 2026.",
+      "Contributed to grassroots technology development and research-driven problem solving under the Viksit Bharat @2047 initiative.",
+      "Gained exposure to space education and practical technology applications; certificate issued Jan 2026.",
     ],
   },
   {
-    role: "Computer Lab Assistant",
+    role: "Java Mentor & Computer Lab Assistant",
     organisation: "Rishi Public School",
     period: "Nov 2024 \u2013 Jan 2025",
     points: [
-      "Mentored students in programming fundamentals and supported hands-on computer lab activities, including lab management and troubleshooting.",
+      "Taught Java fundamentals and mentored students in programming basics.",
+      "Supported hands-on computer lab activities, including lab management and troubleshooting.",
     ],
   },
 ];
 
 export const projects = [
   {
-    title: "IndiLex \u2014 Hybrid Semantic Search Engine for Legal Judgments",
+    title: "Relay \u2014 Durable Execution & Reliability Layer",
     status: "active",
+    repo: "github.com/anaymaurya04/Relay",
+    repoHref: "https://github.com/anaymaurya04/Relay",
+    stack: [
+      "Java 17",
+      "Spring Boot",
+      "Spring Data JPA",
+      "Hibernate",
+      "PostgreSQL",
+      "JUnit 5",
+      "Maven",
+    ],
+    points: [
+      "Executes API calls on a client's behalf and records ambiguous timeouts as UNKNOWN rather than guessing whether the request succeeded.",
+      "Models five operation states and four attempt outcomes, distinguishing requests that were never sent from ones that may have reached the destination.",
+      "Prevents duplicate operations: eight simultaneous identical requests create exactly one operation, enforced by a database unique constraint and concurrency tests.",
+      "Uses Idempotency-Key headers for outbound calls; workers claim jobs with PostgreSQL row locking using FOR UPDATE SKIP LOCKED.",
+      "Wrote 22 automated tests against a real PostgreSQL database and real HTTP servers, including forced connection resets.",
+      "Currently at Phase 3 of 5 \u2014 retry scheduling and demo packaging are next.",
+    ],
+  },
+  {
+    title: "E-Commerce Backend \u2014 REST API",
+    status: "shipped",
+    repo: "github.com/anaymaurya04/ECommerce-Backend",
+    repoHref: "https://github.com/anaymaurya04/ECommerce-Backend",
+    stack: [
+      "Java 17",
+      "Spring Boot",
+      "Spring Data JPA",
+      "Hibernate",
+      "H2",
+      "Lombok",
+      "Maven",
+    ],
+    points: [
+      "Built 15 REST API endpoints for users, products, carts, and orders using Spring Boot, Spring Data JPA, and Hibernate.",
+      "Implemented per-user cart and order separation via the X-User-ID header, keyword product search, and soft deletion.",
+      "Organized the application into controller, service, repository, model, and DTO layers with proper HTTP semantics.",
+      "Backed by an H2 database with a domain model spanning users, addresses, products, carts, and orders.",
+    ],
+  },
+  {
+    title: "IndiLex \u2014 Hybrid Search for Indian Supreme Court Judgments",
+    status: "shipped",
     repo: "github.com/anaymaurya04/IndiSearch",
     repoHref: "https://github.com/anaymaurya04/IndiSearch",
     stack: [
-      "Java",
+      "Java 21",
       "Spring Boot",
       "Spring AI",
       "PostgreSQL (pgvector)",
       "Apache Lucene",
+      "PDFBox",
+      "Docker Compose",
+      "JUnit 5",
     ],
     points: [
-      "Hybrid semantic + keyword search engine over Indian Supreme Court judgments, with traceable source chunks and a per-result score breakdown.",
-      "Structure-aware legal chunker that segments judgments into Facts / Held / Order sections via heading detection, with a paragraph-split fallback for unstructured text.",
-      "Hybrid re-ranking layer using Reciprocal Rank Fusion (k=60) combining dense vector similarity (pgvector, HNSW index), BM25 keyword search (Apache Lucene), and a citation-authority boost.",
-      "Spring AI integrated with a local ONNX runtime (all-MiniLM-L6-v2, 384-dim embeddings), removing dependency on external embedding APIs.",
-      "A GOVERNANCE.md documenting the system's failure modes and guardrails explicitly.",
+      "Built search, ingestion, and health endpoints for a hybrid search service over Indian Supreme Court judgments.",
+      "Implemented PDF extraction and structure-aware chunking (Facts, Held, Order), with 384-dimensional embeddings stored in PostgreSQL using pgvector and an HNSW index.",
+      "Combined dense vector and Apache Lucene BM25 results using Reciprocal Rank Fusion (k=60) and a citation-authority boost.",
+      "Wrote three JUnit 5 test suites covering chunking, rank fusion, and citation boosting.",
+      "Documented failure modes and guardrails in GOVERNANCE.md, including citation staleness and empty-query handling.",
     ],
   },
   {
@@ -164,32 +206,12 @@ export const projects = [
       "Flask web application that uses the pytube library to download YouTube videos, audio, and playlists through a simple web interface.",
     ],
   },
-  {
-    title: "E-Commerce Backend",
-    status: "active",
-    repo: "github.com/anaymaurya04/ECommerce-Backend",
-    repoHref: "https://github.com/anaymaurya04/ECommerce-Backend",
-    stack: [
-      "Java",
-      "Spring Boot",
-      "Spring Data JPA",
-      "Hibernate",
-      "H2 Database",
-      "Lombok",
-      "Maven",
-    ],
-    points: [
-      "Spring Boot e-commerce backend developed incrementally as a structured monolith \u2014 starting from plain in-memory REST APIs and progressing toward full database persistence and DTO-driven architecture.",
-      "User management built on a real persistence layer: Controller \u2192 Service \u2192 Repository layering, DTO-based request/response handling, proper HTTP semantics, and a one-to-one User\u2013Address entity mapping.",
-      "Roadmap covers remaining product CRUD, a user shopping cart system, an order placement flow, and Spring Boot Actuator monitoring.",
-    ],
-  },
 ];
 
 export const leadership = [
-  "Lead Organizer, HackDiwas \u2014 mentored 3 competing teams, translated technical direction into actionable guidance.",
-  "Led the developer team at U Hack 2.0 \u2014 shipped a full-stack product within a 24-hour hackathon deadline.",
-  "Self-directed exploration of GenAI tooling (LangChain, RAG, vector databases) beyond coursework, consistently turned into shipped projects.",
+  "Lead Organizer, HackDiwas \u2014 mentored three competing teams with technical guidance.",
+  "Developer Team Lead, U Hack 2.0 \u2014 led a team in shipping a full-stack product in 24 hours.",
+  "Self-directed exploration of durable execution, PostgreSQL, and hybrid retrieval beyond coursework, turned into shipped projects.",
 ];
 
 export const education = [
@@ -218,7 +240,7 @@ export const certifications = [
 
 export const quickStats = [
   {
-    value: "4",
+    value: String(projects.length),
     label: "Projects",
     color: "blue",
     source: {
@@ -226,7 +248,7 @@ export const quickStats = [
       label: "github.com/anaymaurya04",
     },
   },
-  { value: "41", label: "Skills", color: "purple" },
+  { value: String(skillCount), label: "Skills", color: "purple" },
   { value: "2", label: "Hackathons", color: "pink" },
 ];
 

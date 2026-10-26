@@ -9,7 +9,10 @@ export const Experience = () => {
         eyebrow="04 / experience"
         title="Work Experience"
       >
-        <Lead>A chronological look at my internships and hands-on roles.</Lead>
+        <Lead>
+          A chronological look at my internships, freelance work, and hands-on
+          roles.
+        </Lead>
       </ChapterHeading>
       {experience.map((item, index) => (
         <article

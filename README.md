@@ -8,7 +8,7 @@ A backend-focused portfolio built with React + Vite, styled as engineering docum
 
 - **React 18 + Vite 4** — no router, section-based navigation
 - **CSS Modules** — component-scoped styles + a shared design-token file (`src/vars.css`)
-- **Fonts** (via `@fontsource`): Space Grotesk (display), IBM Plex Sans (body), JetBrains Mono (code/labels/tags)
+- **Fonts** (via `@fontsource`): Syne (display), Bricolage Grotesque (body), Space Mono (code/labels/tags), Pixelify Sans (pixel accents)
 
 ## Design system (codename: INDEX)
 

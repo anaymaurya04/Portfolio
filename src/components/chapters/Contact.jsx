@@ -36,7 +36,7 @@ export const Contact = () => {
       >
         <Lead>
           I&apos;m always open to new opportunities, collaborations, and
-          conversations about backend and GenAI work.
+          conversations about Java backend, reliability, and search systems.
         </Lead>
       </ChapterHeading>
       <div className={contactStyles.cardGrid}>

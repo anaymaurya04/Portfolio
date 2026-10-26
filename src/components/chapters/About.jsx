@@ -4,10 +4,10 @@ import styles from "./Chapters.module.css";
 
 const interests = [
   "Backend Engineering",
-  "Retrieval-Augmented Generation",
+  "Distributed Systems & Reliability",
+  "Java & Spring Boot",
+  "PostgreSQL & Data Modeling",
   "Hybrid Search",
-  "Vector Databases",
-  "GenAI Applications",
   "Data Structures & Algorithms",
 ];
 
@@ -47,11 +47,18 @@ export const About = () => {
             {identity.github}
           </a>
         </div>
+        <div>
+          <strong>LinkedIn:</strong>{" "}
+          <a className={styles.repoLink} href={identity.linkedinHref}>
+            {identity.linkedinLabel}
+          </a>
+        </div>
       </div>
       <Callout icon="&#128161;">
         <strong>Positioning:&nbsp;</strong>
-        Primarily targeting SDE roles through campus placements with a focus on
-        backend and GenAI engineering.
+        Primarily targeting Java backend and SDE roles through campus
+        placements, with a focus on reliable API design, PostgreSQL, and search
+        systems.
       </Callout>
     </div>
   );

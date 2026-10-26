@@ -1,4 +1,4 @@
-import { about, quickStats } from "../../data/content";
+import { about, projects, quickStats } from "../../data/content";
 import { Callout, ChapterHeading, Lead, StatGrid } from "../ui/UI";
 import styles from "./Chapters.module.css";
 
@@ -10,9 +10,10 @@ export const Introduction = () => {
         title="Welcome to My Portfolio"
       >
         <Lead>
-          Backend-focused MCA candidate at JIIT Noida (2025&ndash;2027) with
-          hands-on experience building REST APIs, hybrid search systems, and
-          AI-integrated applications.
+          Java backend-focused MCA candidate at JIIT Noida (2025&ndash;2027)
+          with hands-on experience building REST APIs, durable execution
+          services, and hybrid search systems &mdash; including a reliability
+          layer with 22 automated tests.
         </Lead>
       </ChapterHeading>
       <Callout icon="&#182;">
@@ -24,16 +25,16 @@ export const Introduction = () => {
       <ul className={styles.checkList}>
         <li>
           <strong>Technical Expertise:&nbsp;</strong> a deep dive into skills
-          across backend engineering, databases, search, and GenAI
+          across Java backend engineering, databases, search, and testing
         </li>
         <li>
-          <strong>Hands-on Experience:&nbsp;</strong> internships spanning
-          space-tech education and computer lab mentorship
+          <strong>Hands-on Experience:&nbsp;</strong> internships and freelance
+          work spanning space-tech education, web delivery, and Java mentorship
         </li>
         <li>
-          <strong>Project Showcase:&nbsp;</strong> 4 projects &mdash; a hybrid
-          legal search engine, a GenAI email assistant, a Python utility, and an
-          in-progress e-commerce backend
+          <strong>Project Showcase:&nbsp;</strong> {projects.length} projects
+          &mdash; a durable execution layer, an e-commerce REST API, a hybrid
+          legal search engine, a GenAI email assistant, and a Python utility
         </li>
         <li>
           <strong>Educational Background:&nbsp;</strong> MCA at JIIT Noida and

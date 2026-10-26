@@ -7,8 +7,8 @@ export const Projects = () => {
     <div>
       <ChapterHeading eyebrow="05 / projects" title="Notable Projects">
         <Lead>
-          4 projects spanning hybrid search, GenAI, developer tooling, and an
-          e-commerce backend.
+          {projects.length} projects spanning durable execution, e-commerce
+          APIs, hybrid search, and AI tooling.
         </Lead>
       </ChapterHeading>
       {projects.map((project, index) => (
